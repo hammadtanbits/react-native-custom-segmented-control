@@ -1,0 +1,18 @@
+require 'json'
+version = JSON.parse(File.read('package.json'))["version"]
+
+Pod::Spec.new do |s|
+
+  s.name           = "CustomSegmentedControl"
+  s.version        = version
+  s.summary        = ""
+  s.homepage       = "https://github.com/hammadtanbits/react-native-custom-segmented-control"
+  s.license        = "MIT"
+  s.author         = "Hammad"
+  s.platform       = :ios, "8.0"
+  s.source         = { :git => "https://github.com/hammadtanbits/react-native-custom-segmented-control.git", :tag => "v#{s.version}" }
+  s.source_files   = 'CustomSegmentedControl/**/*.{h,m}'
+  s.preserve_paths = "**/*.js"
+  s.dependency 'React'
+
+end
